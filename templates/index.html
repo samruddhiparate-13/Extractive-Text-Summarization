@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="top-banner">
+      <div class="Title">BRAINY BRIEFS</div>
+    </div>
+    <div class="url">
+      <i class="fa-solid fa-link"></i>
+      <input
+        type="url"
+        name="url"
+        class="neon url-tag"
+        placeholder="Enter Website Link"
+      />
+    </div>
+    <div class="upload">
+      <input type="file" name="" id="upload" />
+      <label for="upload" class="u neon button" id=""
+        ><i class="fa-solid fa-upload"></i>UPLOAD</label
+      >
+    </div>
+    <form action="/res" method="POST">
+      <div class="text">
+        <textarea
+          name="input"
+          id="input"
+          cols="60"
+          rows="15"
+          class="neon textarea"
+          placeholder="Enter Input Text"
+        >
+  {{input_data}}</textarea
+        >
+        <textarea
+          name="output"
+          id="output"
+          cols="60"
+          rows="15"
+          class="neon textarea"
+          placeholder="output Text"
+        >
+  {{output_data}}</textarea
+        >
+      </div>
+      <div class="submit">
+        <input type="submit" value="SUBMIT" class="neon button submit" />
+      </div>
+    </form>
+
+    <script
+      src="https://kit.fontawesome.com/8fe1453288.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
