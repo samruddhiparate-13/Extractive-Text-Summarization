@@ -3,6 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Poiret+One&display=swap"
+      rel="stylesheet"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/static/style.css" />
     <link rel="icon" href="../static/icons8-text-16.png" type="image/x-icon" />
@@ -15,38 +21,25 @@
     <div class="container">
       <form action="/res" method="POST">
         <div class="url">
-          <i class="fa-solid fa-link"></i>
+          <label for="url" id="url-label">Enter Website Link</label><br />
           <input
+            id="url"
             type="url"
             name="url"
             class="neon url-tag"
-            placeholder="Enter Website Link"
+            placeholder="URL"
           />
         </div>
         <div class="text">
           <div class="input-text">
-            <label for="input" class="input-label">Enter Text</label>
-            <textarea
-              name="input"
-              id="input"
-              cols="60"
-              rows="15"
-              class="neon textarea"
-              placeholder="Enter Input Text"
-            >
-            {{input_data}}</textarea
-            >
+            <label for="input" class="input-label">Enter Text</label><br />
+            <textarea name="input" id="input" class="neon textarea">
+              {{input_data}}
+            </textarea>
           </div>
           <div class="output-text">
-            <label for="output" class="output-label">Output Summary</label>
-            <textarea
-              name="output"
-              id="output"
-              cols="60"
-              rows="15"
-              class="neon textarea"
-              placeholder="output Text"
-            >
+            <label for="output" class="output-label">Summary</label><br />
+            <textarea name="output" id="output" class="neon textarea">
             {{output_data}}</textarea
             >
           </div>

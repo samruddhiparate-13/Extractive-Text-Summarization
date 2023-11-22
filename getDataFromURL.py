@@ -4,7 +4,7 @@ import requests
 def getData(url):
     r = requests.get(url)
     soup = BeautifulSoup(r.text, 'html.parser')
-    results = soup.find_all(['h1', 'p'])
+    results = soup.find_all(['h1', 'p', 'article'])
 
 
     text = [result.text for result in results]
